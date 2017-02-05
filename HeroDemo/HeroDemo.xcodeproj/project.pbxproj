@@ -12,9 +12,13 @@
 		911733131E479E3300539957 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911733111E479E3300539957 /* Main.storyboard */; };
 		911733151E479E3300539957 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 911733141E479E3300539957 /* Assets.xcassets */; };
 		911733181E479E3300539957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911733161E479E3300539957 /* LaunchScreen.storyboard */; };
+		EA032B80319D910701FB3222 /* Pods_HeroDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4738509AC51DF773B1E3DDFD /* Pods_HeroDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2118867243CC9AB966CD6957 /* Pods-HeroDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HeroDemo/Pods-HeroDemo.release.xcconfig"; sourceTree = "<group>"; };
+		4738509AC51DF773B1E3DDFD /* Pods_HeroDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeroDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		696894C7666D80ACE75E329F /* Pods-HeroDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeroDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HeroDemo/Pods-HeroDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		9117330A1E479E3200539957 /* HeroDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeroDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9117330D1E479E3200539957 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9117330F1E479E3300539957 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA032B80319D910701FB3222 /* Pods_HeroDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		657DC13F040EE8CEFAD6783D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				696894C7666D80ACE75E329F /* Pods-HeroDemo.debug.xcconfig */,
+				2118867243CC9AB966CD6957 /* Pods-HeroDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		911733011E479E3200539957 = {
 			isa = PBXGroup;
 			children = (
 				9117330C1E479E3200539957 /* HeroDemo */,
 				9117330B1E479E3200539957 /* Products */,
+				657DC13F040EE8CEFAD6783D /* Pods */,
+				D6A24FB4EB33690A4D2C0422 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = HeroDemo;
 			sourceTree = "<group>";
 		};
+		D6A24FB4EB33690A4D2C0422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4738509AC51DF773B1E3DDFD /* Pods_HeroDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9117331C1E479E3300539957 /* Build configuration list for PBXNativeTarget "HeroDemo" */;
 			buildPhases = (
+				306E0580C9449A383EA4C214 /* [CP] Check Pods Manifest.lock */,
 				911733061E479E3200539957 /* Sources */,
 				911733071E479E3200539957 /* Frameworks */,
 				911733081E479E3200539957 /* Resources */,
+				D89F52AEA23669B66F1D7322 /* [CP] Embed Pods Frameworks */,
+				787E8BF4E72A87FF7CF249B2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		306E0580C9449A383EA4C214 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		787E8BF4E72A87FF7CF249B2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroDemo/Pods-HeroDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D89F52AEA23669B66F1D7322 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HeroDemo/Pods-HeroDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		911733061E479E3200539957 /* Sources */ = {
@@ -257,6 +332,7 @@
 		};
 		9117331D1E479E3300539957 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696894C7666D80ACE75E329F /* Pods-HeroDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WC25CT79HG;
@@ -270,6 +346,7 @@
 		};
 		9117331E1E479E3300539957 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2118867243CC9AB966CD6957 /* Pods-HeroDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WC25CT79HG;

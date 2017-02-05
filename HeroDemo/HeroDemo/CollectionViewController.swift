@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class TabberCollectionCell: UICollectionViewCell {
     
@@ -18,6 +19,8 @@ class TabberCollectionCell: UICollectionViewCell {
         } else {
             tabberImageView.image = UIImage(named: "John Sanderson")
         }
+        
+        tabberImageView.heroID = tabber.name
     }
 }
 

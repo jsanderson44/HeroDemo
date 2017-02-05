@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Hero
 
 class TabberCell: UITableViewCell {
     
@@ -24,6 +25,7 @@ class TabberCell: UITableViewCell {
         
         name.text = tabber.name
         position.text = tabber.position
+        tabberImageView.heroID = tabber.name
     }
 }
 

@@ -68,6 +68,9 @@
                             <constraint firstItem="MAv-Pk-poy" firstAttribute="top" secondItem="tjj-qD-F1v" secondAttribute="bottom" id="QWB-uE-Nf8"/>
                         </constraints>
                     </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="collectionView" destination="MAv-Pk-poy" id="gIC-95-1Rc"/>
                     </connections>

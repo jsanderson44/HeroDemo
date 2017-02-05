@@ -8,5 +8,6 @@ target 'HeroDemo' do
   # Pods for HeroDemo
 
   pod 'Hero'
+  pod 'TABResourceLoader', '3.1.0'
 
 end

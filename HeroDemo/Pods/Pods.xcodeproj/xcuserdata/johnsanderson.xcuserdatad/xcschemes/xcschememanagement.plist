@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>TABResourceLoader.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>371032F5F672E2E2FBEE4A2A670A6366</key>
+		<key>A216340477196AFE663E1DA169F37D6F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>CBC08580AE5A802626154E0BCABF642B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ED22D6CC49E9ECA24B322DAE93AE734B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

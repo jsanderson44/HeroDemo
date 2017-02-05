@@ -1,0 +1,6 @@
+framework module TABResourceLoader {
+  umbrella header "TABResourceLoader-umbrella.h"
+
+  export *
+  module * { export * }
+}

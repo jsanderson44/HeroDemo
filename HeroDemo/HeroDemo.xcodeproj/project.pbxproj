@@ -14,6 +14,8 @@
 		911733181E479E3300539957 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911733161E479E3300539957 /* LaunchScreen.storyboard */; };
 		911733201E47AC6400539957 /* tabbers.json in Resources */ = {isa = PBXBuildFile; fileRef = 9117331F1E47AC6400539957 /* tabbers.json */; };
 		911733221E47AD8900539957 /* Tabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911733211E47AD8900539957 /* Tabber.swift */; };
+		911733241E47B85100539957 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911733231E47B85100539957 /* CollectionViewController.swift */; };
+		911733261E47B86000539957 /* CollectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 911733251E47B86000539957 /* CollectionViewController.storyboard */; };
 		EA032B80319D910701FB3222 /* Pods_HeroDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4738509AC51DF773B1E3DDFD /* Pods_HeroDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		911733191E479E3300539957 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9117331F1E47AC6400539957 /* tabbers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tabbers.json; sourceTree = "<group>"; };
 		911733211E47AD8900539957 /* Tabber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tabber.swift; sourceTree = "<group>"; };
+		911733231E47B85100539957 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		911733251E47B86000539957 /* CollectionViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CollectionViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 				9117330D1E479E3200539957 /* AppDelegate.swift */,
 				9117330F1E479E3300539957 /* ViewController.swift */,
 				911733111E479E3300539957 /* Main.storyboard */,
+				911733231E47B85100539957 /* CollectionViewController.swift */,
+				911733251E47B86000539957 /* CollectionViewController.storyboard */,
 				9117331F1E47AC6400539957 /* tabbers.json */,
 				911733211E47AD8900539957 /* Tabber.swift */,
 				911733141E479E3300539957 /* Assets.xcassets */,
@@ -157,6 +163,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911733261E47B86000539957 /* CollectionViewController.storyboard in Resources */,
 				911733181E479E3300539957 /* LaunchScreen.storyboard in Resources */,
 				911733151E479E3300539957 /* Assets.xcassets in Resources */,
 				911733131E479E3300539957 /* Main.storyboard in Resources */,
@@ -219,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				911733241E47B85100539957 /* CollectionViewController.swift in Sources */,
 				911733221E47AD8900539957 /* Tabber.swift in Sources */,
 				911733101E479E3300539957 /* ViewController.swift in Sources */,
 				9117330E1E479E3300539957 /* AppDelegate.swift in Sources */,

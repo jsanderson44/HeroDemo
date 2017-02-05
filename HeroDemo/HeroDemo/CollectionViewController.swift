@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CollectionViewController.swift
 //  HeroDemo
 //
 //  Created by John Sanderson on 05/02/2017.
@@ -8,37 +8,31 @@
 
 import UIKit
 
-class TabberCell: UITableViewCell {
+class TabberCollectionCell: UICollectionViewCell {
     
     @IBOutlet private weak var tabberImageView: UIImageView!
-    @IBOutlet private weak var name: UILabel!
-    @IBOutlet private weak var position: UILabel!
     
     func update(withTabber tabber: Tabber) {
-        
         if let image = UIImage(named: tabber.name) {
             tabberImageView.image = image
         } else {
             tabberImageView.image = UIImage(named: "John Sanderson")
         }
-        
-        name.text = tabber.name
-        position.text = tabber.position
     }
 }
 
-class ViewController: UIViewController {
+class CollectionViewController: UIViewController {
     
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     
     var tabbers = [Tabber]()
     fileprivate let reuseIdentifier = "tabberCell"
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         fetchTabbers()
-        tableView.reloadData()
+        collectionView.reloadData()
     }
     
     func fetchTabbers() {
@@ -58,18 +52,18 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UITableViewDataSource {
+extension CollectionViewController: UICollectionViewDataSource {
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return tabbers.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? TabberCell else {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? TabberCollectionCell else {
             fatalError("could not dequeue cell with identifier \(reuseIdentifier)")
         }
         let tabber = tabbers[indexPath.row]
@@ -77,12 +71,5 @@ extension ViewController: UITableViewDataSource {
         cell.update(withTabber: tabber)
         
         return cell
-    }
-}
-
-extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "CollectionViewController", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
-        present(vc, animated: true)
     }
 }

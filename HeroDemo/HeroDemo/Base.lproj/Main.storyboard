@@ -82,6 +82,7 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="q7b-aY-oCw"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="vn8-et-y84"/>

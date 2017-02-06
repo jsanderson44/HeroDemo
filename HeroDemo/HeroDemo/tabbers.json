@@ -6,18 +6,34 @@
                 }, {
                 "name": "Jon Hocking",
                 "position" : "Senior",
-                "emoji" : "🤠"
+                "emoji" : "⚡️"
                 }, {
                 "name": "Luciano Marisi",
                 "position" : "Senior",
-                "emoji" : "🤡"
+                "emoji" : "🙎🏻‍♂️"
                 }, {
                 "name": "Daniela Bulgaru",
                 "position" : "Associate",
-                "emoji" : "😎"
+                "emoji" : "👱‍♀️"
                 }, {
                 "name": "John Sanderson",
                 "position" : "Associate",
-                "emoji" : "🤓"
+                "emoji" : "🏃🏻"
+                }, {
+                "name": "Ken Boucher",
+                "position" : "Mid Level",
+                "emoji" : "🎷"
+                }, {
+                "name": "Kane Chesire",
+                "position" : "Mid Level",
+                "emoji" : "✨"
+                }, {
+                "name": "Dean Brindley",
+                "position" : "Mid Level",
+                "emoji" : "👊🏻"
+                }, {
+                "name": "Oliver Dew",
+                "position" : "Associate",
+                "emoji" : "⚽"
                 }]
 }

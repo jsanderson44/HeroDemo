@@ -66,6 +66,8 @@ class ViewController: UIViewController {
   
   @objc private func didTapCollectionView() {
     let vc = UIStoryboard(name: "CollectionViewController", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
+    
+    tableView.heroModifiers = [.translate(x: 400, y: 0, z: 0)]
     navigationController?.pushViewController(vc, animated: true)
   }
   

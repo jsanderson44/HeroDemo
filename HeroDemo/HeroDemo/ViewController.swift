@@ -33,7 +33,7 @@ class TabberCell: UITableViewCell {
 
 class ViewController: UIViewController {
   
-  @IBOutlet private weak var tableView: UITableView!
+  @IBOutlet fileprivate weak var tableView: UITableView!
   
   var tabbers = [Tabber]()
   fileprivate let reuseIdentifier = "tabberCell"
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    HeroDebugPlugin.isEnabled = true
+//    HeroDebugPlugin.isEnabled = true
     
     title = "Table View"
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Collection View", style: .plain, target: self, action: #selector(didTapCollectionView))
@@ -101,5 +101,17 @@ extension ViewController: UITableViewDelegate {
     let tabber = tabbers[indexPath.row]
     vc.update(withTabber: tabber)
     navigationController?.pushViewController(vc, animated: true)
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+}
+
+extension ViewController: HeroViewControllerDelegate {
+  func heroWillStartAnimatingTo(viewController: UIViewController) {
+    let visibleCells = tableView.indexPathsForVisibleRows
+    let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
+    
+    for row in 1...remainingRows {
+      tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: .top, animated: true)
+    }
   }
 }

@@ -46,6 +46,10 @@ class EmojiViewController: UIViewController {
     tabberImageView.heroID = "\(newTabber.name)image"
     nameLabel.heroID = newTabber.name
     positionLabel.heroID = newTabber.name + newTabber.position
+    
+    emoji.heroModifiers = [.translate(x: 0, y: 400, z: 0)]
+    nameLabel.heroModifiers = [.translate(x: 400, y: 0, z: 0)]
+    positionLabel.heroModifiers = [.translate(x: 400, y: 0, z: 0)]
   }
   
 }

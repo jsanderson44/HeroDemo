@@ -89,6 +89,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="HkQ-fS-OWA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="IXt-aK-fwQ"/>
                             <constraint firstAttribute="trailing" secondItem="HkQ-fS-OWA" secondAttribute="trailing" id="NFE-jq-ePN"/>

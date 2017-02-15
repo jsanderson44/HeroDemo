@@ -41,7 +41,7 @@ class TableViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-//    HeroDebugPlugin.isEnabled = true
+    HeroDebugPlugin.isEnabled = true
     
     title = "Tabbers"
     navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Collection", style: .plain, target: self, action: #selector(didTapCollectionView))

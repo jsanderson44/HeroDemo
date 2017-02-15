@@ -43,8 +43,8 @@ class TableViewController: UIViewController {
     
 //    HeroDebugPlugin.isEnabled = true
     
-    title = "Table View"
-    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Collection View", style: .plain, target: self, action: #selector(didTapCollectionView))
+    title = "Tabbers"
+    navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Collection", style: .plain, target: self, action: #selector(didTapCollectionView))
     fetchTabbers()
     tableView.reloadData()
   }

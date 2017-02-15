@@ -35,7 +35,7 @@ class CollectionViewController: UIViewController {
     super.viewDidLoad()
     
     collectionView.heroModifiers = [.cascade]
-    title = "Collection View"
+    title = "Tabbers"
     fetchTabbers()
     collectionView.reloadData()
     

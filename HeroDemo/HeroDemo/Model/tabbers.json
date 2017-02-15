@@ -10,11 +10,15 @@
                 }, {
                 "name": "Luciano Marisi",
                 "position" : "Senior",
-                "emoji" : "🙎🏻‍♂️"
+                "emoji" : "😎"
                 }, {
                 "name": "Daniela Bulgaru",
                 "position" : "Associate",
                 "emoji" : "👱‍♀️"
+                }, {
+                "name": "Neil Horton",
+                "position" : "Mid Level",
+                "emoji" : "😇"
                 }, {
                 "name": "John Sanderson",
                 "position" : "Associate",
@@ -35,5 +39,9 @@
                 "name": "Oliver Dew",
                 "position" : "Associate",
                 "emoji" : "⚽"
+                }, {
+                "name": "Nikola Kirev",
+                "position" : "Associate",
+                "emoji" : "🙂"
                 }]
 }

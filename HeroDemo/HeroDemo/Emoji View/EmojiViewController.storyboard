@@ -89,6 +89,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="John Sanderson" width="512" height="340"/>
+        <image name="John Sanderson" width="224" height="224"/>
     </resources>
 </document>

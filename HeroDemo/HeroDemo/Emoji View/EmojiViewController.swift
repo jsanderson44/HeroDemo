@@ -41,6 +41,7 @@ class EmojiViewController: UIViewController {
     }
     
     emoji.text = newTabber.emoji
+    emoji.heroModifiers = [.translate(x: 0, y: 400, z: 0)]
     nameLabel.text = newTabber.name
     positionLabel.text = newTabber.position
     tabberImageView.heroID = "\(newTabber.name)image"

@@ -31,9 +31,9 @@ class TabberCell: UITableViewCell {
   }
 }
 
-class ViewController: UIViewController {
+class TableViewController: UIViewController {
   
-  @IBOutlet fileprivate weak var tableView: UITableView!
+  @IBOutlet weak var tableView: UITableView!
   
   var tabbers = [Tabber]()
   fileprivate let reuseIdentifier = "tabberCell"
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
   
 }
 
-extension ViewController: UITableViewDataSource {
+extension TableViewController: UITableViewDataSource {
   
   func numberOfSections(in tableView: UITableView) -> Int {
     return 1
@@ -95,7 +95,7 @@ extension ViewController: UITableViewDataSource {
   }
 }
 
-extension ViewController: UITableViewDelegate {
+extension TableViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let vc = UIStoryboard(name: "EmojiViewController", bundle: nil).instantiateViewController(withIdentifier: "EmojiViewController") as! EmojiViewController
     let tabber = tabbers[indexPath.row]
@@ -105,13 +105,15 @@ extension ViewController: UITableViewDelegate {
   }
 }
 
-extension ViewController: HeroViewControllerDelegate {
+extension TableViewController: HeroViewControllerDelegate {
   func heroWillStartAnimatingTo(viewController: UIViewController) {
-    let visibleCells = tableView.indexPathsForVisibleRows
-    let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
-    
-    for row in 1...remainingRows {
-      tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: .top, animated: true)
+    if let _ = viewController as? CollectionViewController {
+      let visibleCells = tableView.indexPathsForVisibleRows
+      let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
+      
+      for row in 1...remainingRows {
+        //      tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: .top, animated: true)
+      }
     }
   }
 }

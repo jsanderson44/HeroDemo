@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fGd-G5-PNv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fGd-G5-PNv">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Collection View Controller-->
         <scene sceneID="9cz-dY-v5p">
             <objects>
-                <viewController storyboardIdentifier="CollectionViewController" id="fGd-G5-PNv" customClass="CollectionViewController" customModule="HeroDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="fGd-G5-PNv" customClass="CollectionViewController" customModule="HeroDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tjj-qD-F1v"/>
                         <viewControllerLayoutGuide type="bottom" id="gXF-3Y-UJD"/>
@@ -39,7 +39,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="John Sanderson" translatesAutoresizingMaskIntoConstraints="NO" id="LBB-e6-Uk7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="130" height="125"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                 </imageView>
                                             </subviews>
                                         </view>

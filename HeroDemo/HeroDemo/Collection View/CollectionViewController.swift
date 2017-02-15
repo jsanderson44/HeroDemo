@@ -26,7 +26,7 @@ class TabberCollectionCell: UICollectionViewCell {
 
 class CollectionViewController: UIViewController {
   
-  @IBOutlet private weak var collectionView: UICollectionView!
+  @IBOutlet fileprivate weak var collectionView: UICollectionView!
   
   var tabbers = [Tabber]()
   fileprivate let reuseIdentifier = "tabberCell"
@@ -38,6 +38,12 @@ class CollectionViewController: UIViewController {
     title = "Collection View"
     fetchTabbers()
     collectionView.reloadData()
+    
+    collectionView.heroModifiers = [.cascade]
+    
+    for cell in collectionView.visibleCells {
+      cell.heroModifiers = [.scale(0.5), .rotate(x: 10, y: 0, z: 0)]
+    }
   }
   
   func fetchTabbers() {
@@ -85,5 +91,23 @@ extension CollectionViewController: UICollectionViewDelegate {
     let tabber = tabbers[indexPath.row]
     vc.update(withTabber: tabber)
     navigationController?.pushViewController(vc, animated: true)
+  }
+}
+
+
+extension CollectionViewController: HeroViewControllerDelegate{
+  func heroWillStartAnimatingFrom(viewController: UIViewController) {
+    if let vc = viewController as? TableViewController,
+      let currentCellIndex = vc.tableView?.indexPathsForVisibleRows?[0] {
+      collectionView!.heroModifiers = [.cascade]
+      if !collectionView!.indexPathsForVisibleItems.contains(currentCellIndex){
+        // make the cell visible
+        collectionView!.scrollToItem(at: currentCellIndex,
+                                     at: IndexPath(row: 0, section: 0) < currentCellIndex ? .bottom : .top,
+                                     animated: false)
+      }
+    } else {
+      collectionView!.heroModifiers = [.cascade, .delay(0.2)]
+    }
   }
 }

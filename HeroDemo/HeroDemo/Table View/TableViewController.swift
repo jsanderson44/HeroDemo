@@ -105,15 +105,15 @@ extension TableViewController: UITableViewDelegate {
   }
 }
 
-extension TableViewController: HeroViewControllerDelegate {
-  func heroWillStartAnimatingTo(viewController: UIViewController) {
-    if let _ = viewController as? CollectionViewController {
-      let visibleCells = tableView.indexPathsForVisibleRows
-      let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
-      
-      for row in 1...remainingRows {
-        //      tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: .top, animated: true)
-      }
-    }
-  }
-}
+//extension TableViewController: HeroViewControllerDelegate {
+//  func heroWillStartAnimatingTo(viewController: UIViewController) {
+//    if let _ = viewController as? CollectionViewController {
+//      let visibleCells = tableView.indexPathsForVisibleRows
+//      let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
+//      
+//      for row in 1...remainingRows {
+//        //      tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: .top, animated: true)
+//      }
+//    }
+//  }
+//}

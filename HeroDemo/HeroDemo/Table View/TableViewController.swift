@@ -107,12 +107,13 @@ extension TableViewController: UITableViewDelegate {
 
 //extension TableViewController: HeroViewControllerDelegate {
 //  func heroWillStartAnimatingTo(viewController: UIViewController) {
-//    if let _ = viewController as? CollectionViewController {
+//    if let vc = viewController as? CollectionViewController {
 //      let visibleCells = tableView.indexPathsForVisibleRows
 //      let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
 //      
-//      for row in 1...remainingRows {
-//        //      tableView.scrollToRow(at: IndexPath(row: row, section: 0), at: .top, animated: true)
+//      vc.collectionView.heroModifiers = [.cascade]
+//      for cell in vc.collectionView.visibleCells {
+//        cell.heroModifiers = [.scale(0.5), .rotate(x: 10, y: 0, z: 0)]
 //      }
 //    }
 //  }

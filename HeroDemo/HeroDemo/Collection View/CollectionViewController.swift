@@ -26,7 +26,7 @@ class TabberCollectionCell: UICollectionViewCell {
 
 class CollectionViewController: UIViewController {
   
-  @IBOutlet fileprivate weak var collectionView: UICollectionView!
+  @IBOutlet weak var collectionView: UICollectionView!
   
   var tabbers = [Tabber]()
   fileprivate let reuseIdentifier = "tabberCell"
@@ -34,16 +34,9 @@ class CollectionViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    collectionView.heroModifiers = [.cascade]
     title = "Tabbers"
     fetchTabbers()
     collectionView.reloadData()
-    
-    collectionView.heroModifiers = [.cascade]
-    
-    for cell in collectionView.visibleCells {
-      cell.heroModifiers = [.scale(0.5), .rotate(x: 10, y: 0, z: 0)]
-    }
   }
   
   func fetchTabbers() {

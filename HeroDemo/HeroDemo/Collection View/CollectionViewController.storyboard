@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fGd-G5-PNv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Collection View Controller-->
+        <scene sceneID="9cz-dY-v5p">
+            <objects>
+                <viewController storyboardIdentifier="CollectionViewController" automaticallyAdjustsScrollViewInsets="NO" id="fGd-G5-PNv" customClass="CollectionViewController" customModule="HeroDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tjj-qD-F1v"/>
+                        <viewControllerLayoutGuide type="bottom" id="gXF-3Y-UJD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ppH-HI-h7z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MAv-Pk-poy">
+                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hPi-mC-pgM">
+                                    <size key="itemSize" width="125" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabberCell" id="7kU-qM-MyV" customClass="TabberCollectionCell" customModule="HeroDemo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="John Sanderson" translatesAutoresizingMaskIntoConstraints="NO" id="LBB-e6-Uk7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="LBB-e6-Uk7" firstAttribute="leading" secondItem="7kU-qM-MyV" secondAttribute="leading" id="1vc-ss-LCI"/>
+                                            <constraint firstAttribute="bottom" secondItem="LBB-e6-Uk7" secondAttribute="bottom" id="SQk-Nv-QqF"/>
+                                            <constraint firstAttribute="trailing" secondItem="LBB-e6-Uk7" secondAttribute="trailing" id="bKp-qe-Ebd"/>
+                                            <constraint firstAttribute="top" secondItem="LBB-e6-Uk7" secondAttribute="top" id="hcw-3x-aMI"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="tabberImageView" destination="LBB-e6-Uk7" id="b1G-2n-B0P"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="fGd-G5-PNv" id="dWE-ha-BiS"/>
+                                    <outlet property="delegate" destination="fGd-G5-PNv" id="Tsg-qU-gWQ"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MAv-Pk-poy" secondAttribute="trailing" id="2Bf-QV-2cp"/>
+                            <constraint firstItem="gXF-3Y-UJD" firstAttribute="top" secondItem="MAv-Pk-poy" secondAttribute="bottom" id="3Yo-ta-TNm"/>
+                            <constraint firstItem="MAv-Pk-poy" firstAttribute="leading" secondItem="ppH-HI-h7z" secondAttribute="leading" id="Kd5-EA-Ii5"/>
+                            <constraint firstItem="MAv-Pk-poy" firstAttribute="top" secondItem="tjj-qD-F1v" secondAttribute="bottom" constant="20" id="QWB-uE-Nf8"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isHeroEnabled" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="collectionView" destination="MAv-Pk-poy" id="gIC-95-1Rc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gbd-jN-nAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="225.33733133433284"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="John Sanderson" width="224" height="224"/>
+    </resources>
+</document>

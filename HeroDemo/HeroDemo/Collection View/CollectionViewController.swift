@@ -20,6 +20,7 @@ class TabberCollectionCell: UICollectionViewCell {
       tabberImageView.image = UIImage(named: "John Sanderson")
     }
     
+    // DEMO: - assign imgae view with same heroID as table view image
     tabberImageView.heroID = "\(tabber.name)image"
   }
 }
@@ -84,23 +85,5 @@ extension CollectionViewController: UICollectionViewDelegate {
     let tabber = tabbers[indexPath.row]
     vc.update(withTabber: tabber)
     navigationController?.pushViewController(vc, animated: true)
-  }
-}
-
-
-extension CollectionViewController: HeroViewControllerDelegate{
-  func heroWillStartAnimatingFrom(viewController: UIViewController) {
-    if let vc = viewController as? TableViewController,
-      let currentCellIndex = vc.tableView?.indexPathsForVisibleRows?[0] {
-      collectionView!.heroModifiers = [.cascade]
-      if !collectionView!.indexPathsForVisibleItems.contains(currentCellIndex){
-        // make the cell visible
-        collectionView!.scrollToItem(at: currentCellIndex,
-                                     at: IndexPath(row: 0, section: 0) < currentCellIndex ? .bottom : .top,
-                                     animated: false)
-      }
-    } else {
-      collectionView!.heroModifiers = [.cascade, .delay(0.2)]
-    }
   }
 }

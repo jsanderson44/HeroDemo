@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  HeroDemo
 //
 //  Created by John Sanderson on 05/02/2017.
@@ -25,6 +25,8 @@ class TabberCell: UITableViewCell {
     
     name.text = tabber.name
     position.text = tabber.position
+    
+    // DEMO: - Assign views with heroIDs matching each tabber
     tabberImageView.heroID = "\(tabber.name)image"
     name.heroID = tabber.name
     position.heroID = tabber.name + tabber.position
@@ -41,6 +43,7 @@ class TableViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    // DEMO: - Enable Hero debug
 //    HeroDebugPlugin.isEnabled = true
     
     title = "Tabbers"
@@ -67,6 +70,7 @@ class TableViewController: UIViewController {
   @objc private func didTapCollectionView() {
     let vc = UIStoryboard(name: "CollectionViewController", bundle: nil).instantiateViewController(withIdentifier: "CollectionViewController") as! CollectionViewController
     
+    // DEMO: - Add hero modifiers to transition to collection view (slides name off, use .ignoreSubviewModifiers to apply to all)
     tableView.heroModifiers = [.translate(x: 400, y: 0, z: 0)]
     navigationController?.pushViewController(vc, animated: true)
   }
@@ -104,17 +108,3 @@ extension TableViewController: UITableViewDelegate {
     tableView.deselectRow(at: indexPath, animated: true)
   }
 }
-
-//extension TableViewController: HeroViewControllerDelegate {
-//  func heroWillStartAnimatingTo(viewController: UIViewController) {
-//    if let vc = viewController as? CollectionViewController {
-//      let visibleCells = tableView.indexPathsForVisibleRows
-//      let remainingRows = tableView.numberOfRows(inSection: 0) - (visibleCells?.last?.row)!
-//      
-//      vc.collectionView.heroModifiers = [.cascade]
-//      for cell in vc.collectionView.visibleCells {
-//        cell.heroModifiers = [.scale(0.5), .rotate(x: 10, y: 0, z: 0)]
-//      }
-//    }
-//  }
-//}
